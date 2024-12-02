@@ -20,6 +20,9 @@ async function getMessages(locale: string) {
   try {
     return (await import(`@/messages/${locale}.json`)).default
   } catch (error) {
+    if (locale !== 'en') {
+      return (await import('@/messages/en.json')).default
+    }
     notFound()
   }
 }
@@ -31,9 +34,11 @@ export default async function LocaleLayout({
   children: React.ReactNode
   params: { locale: string }
 }) {
-  const messages = await getMessages(locale)
+  if (!locales.includes(locale as any)) {
+    notFound()
+  }
 
-  if (!locales.includes(locale)) notFound()
+  const messages = await getMessages(locale)
 
   return (
     <html lang={locale} className={`${inter.variable} ${playfair.variable}`}>

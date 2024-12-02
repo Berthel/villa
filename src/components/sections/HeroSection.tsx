@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react'
 import Image from 'next/image'
 import { motion, AnimatePresence } from 'framer-motion'
 import { useTranslations } from 'next-intl'
+import { FaChevronDown } from 'react-icons/fa'
 
 const images = [
   '/photos/251398550.jpg',
@@ -24,6 +25,13 @@ export function HeroSection() {
 
     return () => clearInterval(timer)
   }, [])
+
+  const scrollToNextSection = () => {
+    window.scrollTo({
+      top: window.innerHeight,
+      behavior: 'smooth'
+    })
+  }
 
   return (
     <div className="h-screen relative overflow-hidden">
@@ -80,7 +88,7 @@ export function HeroSection() {
       </div>
 
       {/* Image Navigation */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2">
+      <div className="absolute bottom-24 left-1/2 transform -translate-x-1/2">
         <div className="flex space-x-2">
           {images.map((_, index) => (
             <button
@@ -95,6 +103,31 @@ export function HeroSection() {
           ))}
         </div>
       </div>
+
+      {/* Scroll Indicator */}
+      <motion.div
+        initial={{ opacity: 0, y: 10 }}
+        animate={{ 
+          opacity: 1, 
+          y: [0, 10, 0],
+          transition: {
+            y: {
+              repeat: Infinity,
+              duration: 2,
+              ease: "easeInOut"
+            }
+          }
+        }}
+        className="absolute bottom-8 left-1/2 transform -translate-x-1/2 cursor-pointer"
+        onClick={scrollToNextSection}
+      >
+        <div className="flex flex-col items-center text-white space-y-2">
+          <span className="text-sm font-medium tracking-wider uppercase opacity-75">
+            {t('scrollDown')}
+          </span>
+          <FaChevronDown className="w-6 h-6 animate-bounce" />
+        </div>
+      </motion.div>
     </div>
   )
 }

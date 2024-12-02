@@ -1,0 +1,51 @@
+{
+  "hero": {
+    "title": "Lyxvilla i Eira da Palma",
+    "subtitle": "Upplev essensen av lyxigt boende i Algarve",
+    "price": "€899.000",
+    "scrollDown": "Scroll Down"
+  },
+  "keyFeatures": {
+    "title": "Huvudfunktioner",
+    "bedrooms": {
+      "title": "4 Sovrum",
+      "description": "Rymliga sovrum med eget badrum"
+    },
+    "bathrooms": {
+      "title": "3 Badrum",
+      "description": "Moderna badrum med lyxiga inredningar"
+    },
+    "livingSpace": {
+      "title": "400m²",
+      "description": "Boyta designad för komfort"
+    },
+    "plot": {
+      "title": "7000m² Tomt",
+      "description": "Vidsträckt mark med anlagda trädgårdar"
+    }
+  },
+  "propertyHighlights": {
+    "title": "Fastighetens Höjdpunkter",
+    "subtitle": "Upptäck de exceptionella funktionerna som gör denna villa unik",
+    "pool": {
+      "title": "Infinity Pool",
+      "description": "Imponerande 50m³ infinity pool med panoramautsikt"
+    },
+    "guestApartment": {
+      "title": "Gästlägenhet",
+      "description": "Fristående gästlägenhet för besökare"
+    },
+    "terrace": {
+      "title": "Täckt Terrass",
+      "description": "Rymlig terrass med inbyggt grillområde"
+    },
+    "sustainable": {
+      "title": "Hållbart Boende",
+      "description": "Solpaneler och privat vattenbrunn"
+    },
+    "views": {
+      "title": "Fantastisk Utsikt",
+      "description": "Panoramautsikt över berg och hav"
+    }
+  }
+} 
