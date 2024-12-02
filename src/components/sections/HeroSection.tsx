@@ -34,9 +34,22 @@ export function HeroSection() {
   }
 
   return (
-    <div className="h-screen relative overflow-hidden">
-      {/* Background Image */}
-      <AnimatePresence mode="wait">
+    <div className="h-screen relative overflow-hidden bg-black">
+      {/* Previous Image (for smooth transition) */}
+      <div className="absolute inset-0" style={{ zIndex: 0 }}>
+        <Image
+          src={images[(currentImageIndex - 1 + images.length) % images.length]}
+          alt={t('title')}
+          fill
+          sizes="100vw"
+          priority
+          className="object-cover opacity-50"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-black/60" />
+      </div>
+
+      {/* Current Image */}
+      <AnimatePresence initial={false} mode="sync">
         <motion.div
           key={currentImageIndex}
           initial={{ opacity: 0 }}
@@ -44,6 +57,7 @@ export function HeroSection() {
           exit={{ opacity: 0 }}
           transition={{ duration: 2, ease: "easeInOut" }}
           className="absolute inset-0"
+          style={{ zIndex: 1 }}
         >
           <Image
             src={images[currentImageIndex]}
@@ -58,7 +72,7 @@ export function HeroSection() {
       </AnimatePresence>
 
       {/* Content */}
-      <div className="absolute inset-0 flex items-center justify-center">
+      <div className="absolute inset-0 flex items-center justify-center" style={{ zIndex: 2 }}>
         <div className="text-center text-white px-4 max-w-4xl mx-auto">
           <motion.h1
             initial={{ y: 20, opacity: 0 }}
@@ -108,24 +122,29 @@ export function HeroSection() {
       <motion.div
         initial={{ opacity: 0, y: 10 }}
         animate={{ 
-          opacity: 1, 
-          y: [0, 10, 0],
+          opacity: [0.7, 1, 0.7],
+          y: [0, 8, 0],
           transition: {
+            opacity: {
+              repeat: Infinity,
+              duration: 1.5,
+              ease: "easeInOut"
+            },
             y: {
               repeat: Infinity,
-              duration: 2,
+              duration: 1.5,
               ease: "easeInOut"
             }
           }
         }}
-        className="absolute bottom-8 left-1/2 transform -translate-x-1/2 cursor-pointer"
+        className="absolute bottom-8 left-0 right-0 mx-auto w-max cursor-pointer z-20 hover:opacity-100 transition-opacity"
         onClick={scrollToNextSection}
       >
         <div className="flex flex-col items-center text-white space-y-2">
-          <span className="text-sm font-medium tracking-wider uppercase opacity-75">
+          <span className="text-sm font-medium tracking-wider uppercase drop-shadow-md">
             {t('scrollDown')}
           </span>
-          <FaChevronDown className="w-6 h-6 animate-bounce" />
+          <FaChevronDown className="w-6 h-6 drop-shadow-md" />
         </div>
       </motion.div>
     </div>

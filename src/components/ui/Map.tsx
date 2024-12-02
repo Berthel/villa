@@ -35,15 +35,15 @@ export default function Map() {
 
   return (
     <MapContainer
-      center={[37.1260, -7.6489]}
-      zoom={13}
+      center={[37.182473348748466, -7.644578421285872]}
+      zoom={15}
       style={{ height: '100%', width: '100%' }}
     >
       <TileLayer
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
       />
-      <Marker position={[37.1260, -7.6489]}>
+      <Marker position={[37.182473348748466, -7.644578421285872]}>
         <Popup>
           Luxury Villa in Eira da Palma
         </Popup>
