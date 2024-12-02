@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react'
 import Image from 'next/image'
 import { motion, AnimatePresence } from 'framer-motion'
+import { useTranslations } from 'next-intl'
 
 const images = [
   '/photos/251398550.jpg',
@@ -13,6 +14,7 @@ const images = [
 ]
 
 export function HeroSection() {
+  const t = useTranslations('hero')
   const [currentImageIndex, setCurrentImageIndex] = useState(0)
 
   useEffect(() => {
@@ -24,7 +26,8 @@ export function HeroSection() {
   }, [])
 
   return (
-    <section className="relative h-screen w-full overflow-hidden">
+    <div className="h-screen relative overflow-hidden">
+      {/* Background Image */}
       <AnimatePresence mode="wait">
         <motion.div
           key={currentImageIndex}
@@ -33,50 +36,51 @@ export function HeroSection() {
           exit={{ opacity: 0 }}
           transition={{ duration: 1 }}
           className="absolute inset-0"
-          style={{ position: 'relative', height: '100%' }}
         >
           <Image
             src={images[currentImageIndex]}
-            alt="Luxury Villa in Eira da Palma"
+            alt={t('title')}
             fill
             sizes="100vw"
             priority
             className="object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/50" />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-black/60" />
         </motion.div>
       </AnimatePresence>
 
-      <div className="absolute inset-0 flex items-center justify-center z-10">
-        <div className="text-center text-white p-4">
+      {/* Content */}
+      <div className="absolute inset-0 flex items-center justify-center">
+        <div className="text-center text-white px-4 max-w-4xl mx-auto">
           <motion.h1
             initial={{ y: 20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="heading-1 mb-4"
+            className="text-5xl md:text-6xl lg:text-7xl font-serif font-bold mb-6"
           >
-            Luxury Villa in Eira da Palma
+            {t('title')}
           </motion.h1>
           <motion.p
             initial={{ y: 20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="text-xl md:text-2xl mb-8"
+            className="text-xl md:text-2xl mb-8 text-white/90"
           >
-            Experience the epitome of luxury living in Algarve
+            {t('subtitle')}
           </motion.p>
           <motion.div
             initial={{ y: 20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.6 }}
-            className="text-3xl md:text-4xl font-serif font-bold"
+            className="text-4xl md:text-5xl font-serif font-bold"
           >
-            €899,000
+            {t('price')}
           </motion.div>
         </div>
       </div>
 
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10">
+      {/* Image Navigation */}
+      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2">
         <div className="flex space-x-2">
           {images.map((_, index) => (
             <button
@@ -86,11 +90,11 @@ export function HeroSection() {
                 index === currentImageIndex
                   ? 'bg-white'
                   : 'bg-white/50 hover:bg-white/75'
-              }`}
+              } transition-colors duration-300`}
             />
           ))}
         </div>
       </div>
-    </section>
+    </div>
   )
 }

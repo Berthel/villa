@@ -1,0 +1,50 @@
+{
+  "hero": {
+    "title": "Luksusvilla i Eira da Palma",
+    "subtitle": "Oplev indbegrebet af luksuriøs livsstil i Algarve",
+    "price": "€899.000"
+  },
+  "keyFeatures": {
+    "title": "Nøglefunktioner",
+    "bedrooms": {
+      "title": "4 Soveværelser",
+      "description": "Rummelige soveværelser med eget bad"
+    },
+    "bathrooms": {
+      "title": "3 Badeværelser",
+      "description": "Moderne badeværelser med luksusudstyr"
+    },
+    "livingSpace": {
+      "title": "400m²",
+      "description": "Boligareal designet til komfort"
+    },
+    "plot": {
+      "title": "7000m² Grund",
+      "description": "Omfattende arealer med anlagte haver"
+    }
+  },
+  "propertyHighlights": {
+    "title": "Ejendomshøjdepunkter",
+    "subtitle": "Opdag de exceptionelle funktioner, der gør denne villa unik",
+    "pool": {
+      "title": "Infinity Pool",
+      "description": "Imponerende 50m³ infinity pool med panoramaudsigt"
+    },
+    "guestApartment": {
+      "title": "Gæstelejlighed",
+      "description": "Selvstændig gæstelejlighed til besøgende"
+    },
+    "terrace": {
+      "title": "Overdækket Terrasse",
+      "description": "Rummelig terrasse med indbygget grillareal"
+    },
+    "sustainable": {
+      "title": "Bæredygtig Bolig",
+      "description": "Solpaneler og privat vandbrønd"
+    },
+    "views": {
+      "title": "Betagende Udsigt",
+      "description": "Panoramaudsigt over bjerge og hav"
+    }
+  }
+} 

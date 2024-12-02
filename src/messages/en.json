@@ -1,0 +1,50 @@
+{
+  "hero": {
+    "title": "Luxury Villa in Eira da Palma",
+    "subtitle": "Experience the epitome of luxury living in Algarve",
+    "price": "€899,000"
+  },
+  "keyFeatures": {
+    "title": "Key Features",
+    "bedrooms": {
+      "title": "4 Bedrooms",
+      "description": "Spacious bedrooms with en-suite facilities"
+    },
+    "bathrooms": {
+      "title": "3 Bathrooms",
+      "description": "Modern bathrooms with luxury fittings"
+    },
+    "livingSpace": {
+      "title": "400m²",
+      "description": "Living space designed for comfort"
+    },
+    "plot": {
+      "title": "7000m² Plot",
+      "description": "Expansive grounds with landscaped gardens"
+    }
+  },
+  "propertyHighlights": {
+    "title": "Property Highlights",
+    "subtitle": "Discover the exceptional features that make this villa unique",
+    "pool": {
+      "title": "Infinity Pool",
+      "description": "Stunning 50m³ infinity pool with panoramic views"
+    },
+    "guestApartment": {
+      "title": "Guest Apartment",
+      "description": "Self-contained guest apartment for visitors"
+    },
+    "terrace": {
+      "title": "Covered Terrace",
+      "description": "Spacious terrace with built-in BBQ area"
+    },
+    "sustainable": {
+      "title": "Sustainable Living",
+      "description": "Solar panels and private water well"
+    },
+    "views": {
+      "title": "Breathtaking Views",
+      "description": "Panoramic mountain and sea views"
+    }
+  }
+} 
