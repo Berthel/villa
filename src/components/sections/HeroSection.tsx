@@ -27,14 +27,14 @@ export function HeroSection() {
   }, [])
 
   const scrollToNextSection = () => {
-    window.scrollTo({
-      top: window.innerHeight,
-      behavior: 'smooth'
-    })
+    const nextSection = document.querySelector('section:nth-of-type(2)')
+    if (nextSection) {
+      nextSection.scrollIntoView({ behavior: 'smooth' })
+    }
   }
 
   return (
-    <div className="h-screen relative overflow-hidden bg-black w-full touch-none">
+    <div className="min-h-screen relative overflow-hidden bg-black w-full">
       {/* Previous Image (for smooth transition) */}
       <div className="absolute inset-0 w-full" style={{ zIndex: 0 }}>
         <Image
@@ -44,7 +44,6 @@ export function HeroSection() {
           sizes="100vw"
           priority
           className="object-cover opacity-50"
-          style={{ touchAction: 'none' }}
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-black/60" />
       </div>
@@ -67,7 +66,6 @@ export function HeroSection() {
             sizes="100vw"
             priority
             className="object-cover"
-            style={{ touchAction: 'none' }}
           />
           <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-black/60" />
         </motion.div>
