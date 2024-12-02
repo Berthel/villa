@@ -34,9 +34,9 @@ export function HeroSection() {
   }
 
   return (
-    <div className="h-screen relative overflow-hidden bg-black">
+    <div className="h-screen relative overflow-hidden bg-black w-full touch-none">
       {/* Previous Image (for smooth transition) */}
-      <div className="absolute inset-0" style={{ zIndex: 0 }}>
+      <div className="absolute inset-0 w-full" style={{ zIndex: 0 }}>
         <Image
           src={images[(currentImageIndex - 1 + images.length) % images.length]}
           alt={t('title')}
@@ -44,6 +44,7 @@ export function HeroSection() {
           sizes="100vw"
           priority
           className="object-cover opacity-50"
+          style={{ touchAction: 'none' }}
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-black/60" />
       </div>
@@ -56,7 +57,7 @@ export function HeroSection() {
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 2, ease: "easeInOut" }}
-          className="absolute inset-0"
+          className="absolute inset-0 w-full"
           style={{ zIndex: 1 }}
         >
           <Image
@@ -66,13 +67,14 @@ export function HeroSection() {
             sizes="100vw"
             priority
             className="object-cover"
+            style={{ touchAction: 'none' }}
           />
           <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-black/60" />
         </motion.div>
       </AnimatePresence>
 
       {/* Content */}
-      <div className="absolute inset-0 flex items-center justify-center" style={{ zIndex: 2 }}>
+      <div className="absolute inset-0 flex items-center justify-center w-full" style={{ zIndex: 2 }}>
         <div className="text-center text-white px-4 max-w-4xl mx-auto">
           <motion.h1
             initial={{ y: 20, opacity: 0 }}
