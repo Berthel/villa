@@ -47,15 +47,20 @@ export function Gallery() {
           <motion.div
             initial={{ opacity: 0 }}
             animate={inView ? { opacity: 1 } : {}}
-            transition={{ duration: 0.6, delay: 0.2 }}
+            transition={{ duration: 1.2, ease: "easeInOut" }}
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"
           >
             {galleryImages.map((image, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, scale: 0.9 }}
+                initial={{ opacity: 0, scale: 0.95 }}
                 animate={inView ? { opacity: 1, scale: 1 } : {}}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                transition={{ 
+                  duration: 1.2, 
+                  delay: index * 0.15, 
+                  ease: "easeOut",
+                  opacity: { duration: 1.5 }
+                }}
                 className="relative aspect-[4/3] cursor-pointer group"
                 onClick={() => setSelectedImage(image)}
                 style={{ position: 'relative', height: '300px' }}
@@ -65,45 +70,63 @@ export function Gallery() {
                   alt={`Villa image ${index + 1}`}
                   fill
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                  className="object-cover rounded-lg transition-transform duration-300 group-hover:scale-105"
+                  className="object-cover rounded-lg transition-all duration-700 ease-in-out group-hover:scale-103"
+                  priority={index < 6}
                 />
-                <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-20 transition-opacity duration-300 rounded-lg" />
+                <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-25 transition-all duration-700 ease-in-out rounded-lg" />
               </motion.div>
             ))}
           </motion.div>
         </div>
       </section>
 
-      <AnimatePresence>
+      <AnimatePresence initial={false}>
         {selectedImage && (
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
+            transition={{ duration: 1.2, ease: "easeInOut" }}
             className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-90 p-4"
             onClick={() => setSelectedImage(null)}
           >
             <motion.div
-              initial={{ scale: 0.9 }}
-              animate={{ scale: 1 }}
-              exit={{ scale: 0.9 }}
+              initial={{ scale: 0.95, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.95, opacity: 0 }}
+              transition={{ 
+                duration: 1.2, 
+                ease: "easeInOut",
+                opacity: {
+                  duration: 1.5
+                },
+                scale: {
+                  type: "spring",
+                  damping: 30,
+                  stiffness: 80
+                }
+              }}
               className="relative w-full max-w-5xl aspect-[4/3]"
               onClick={(e) => e.stopPropagation()}
               style={{ position: 'relative', height: '80vh' }}
             >
               <button
-                className="absolute top-4 right-4 z-10 p-2 bg-white dark:bg-gray-800 rounded-full shadow-lg"
+                className="absolute top-4 right-4 z-10 p-2 bg-white dark:bg-gray-800 rounded-full shadow-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors duration-200"
                 onClick={() => setSelectedImage(null)}
               >
                 <FaTimes className="w-6 h-6" />
               </button>
-              <Image
-                src={selectedImage}
-                alt="Selected villa image"
-                fill
-                sizes="100vw"
-                className="object-contain rounded-lg"
-              />
+              <div className="relative w-full h-full overflow-hidden">
+                <Image
+                  src={selectedImage}
+                  alt="Selected villa image"
+                  fill
+                  sizes="100vw"
+                  className="object-contain rounded-lg"
+                  priority
+                  loading="eager"
+                />
+              </div>
             </motion.div>
           </motion.div>
         )}
