@@ -4,12 +4,14 @@ import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
 import { FaWhatsapp, FaEnvelope, FaPhone, FaPrint, FaShare } from 'react-icons/fa'
+import { useTranslations } from 'next-intl'
 
 export function ContactSection() {
   const [ref, inView] = useInView({
     triggerOnce: true,
     threshold: 0.1,
   })
+  const t = useTranslations('contact')
 
   const [formData, setFormData] = useState({
     name: '',
@@ -34,8 +36,8 @@ export function ContactSection() {
     if (canShare) {
       try {
         await navigator.share({
-          title: 'Luxury Villa in Eira da Palma',
-          text: 'Check out this stunning luxury villa in Algarve',
+          title: t('share.title'),
+          text: t('share.text'),
           url: window.location.href,
         })
       } catch (error) {
@@ -59,9 +61,9 @@ export function ContactSection() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="heading-2 mb-4">Contact Us</h2>
+          <h2 className="heading-2 mb-4">{t('title')}</h2>
           <p className="text-xl text-gray-600 dark:text-gray-300">
-            Interested in this property? Get in touch with us
+            {t('subtitle')}
           </p>
         </motion.div>
 
@@ -74,7 +76,7 @@ export function ContactSection() {
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
                 <label htmlFor="name" className="block text-sm font-medium mb-2">
-                  Name
+                  {t('form.name.label')}
                 </label>
                 <input
                   type="text"
@@ -90,7 +92,7 @@ export function ContactSection() {
 
               <div>
                 <label htmlFor="email" className="block text-sm font-medium mb-2">
-                  Email
+                  {t('form.email.label')}
                 </label>
                 <input
                   type="email"
@@ -106,7 +108,7 @@ export function ContactSection() {
 
               <div>
                 <label htmlFor="phone" className="block text-sm font-medium mb-2">
-                  Phone
+                  {t('form.phone.label')}
                 </label>
                 <input
                   type="tel"
@@ -121,7 +123,7 @@ export function ContactSection() {
 
               <div>
                 <label htmlFor="message" className="block text-sm font-medium mb-2">
-                  Message
+                  {t('form.message.label')}
                 </label>
                 <textarea
                   id="message"
@@ -139,7 +141,7 @@ export function ContactSection() {
                 type="submit"
                 className="w-full btn-primary"
               >
-                Send Message
+                {t('form.submit')}
               </button>
             </form>
           </motion.div>
@@ -151,59 +153,59 @@ export function ContactSection() {
             className="space-y-8"
           >
             <div>
-              <h3 className="text-xl font-bold mb-4">Quick Contact</h3>
+              <h3 className="text-xl font-bold mb-4">{t('quickContact.title')}</h3>
               <div className="space-y-4">
                 <a
                   href="https://wa.me/1234567890"
                   className="flex items-center space-x-3 text-gray-600 dark:text-gray-300 hover:text-primary-600"
                 >
                   <FaWhatsapp className="w-5 h-5" />
-                  <span>WhatsApp Us</span>
+                  <span>{t('quickContact.whatsapp')}</span>
                 </a>
                 <a
                   href="mailto:info@example.com"
                   className="flex items-center space-x-3 text-gray-600 dark:text-gray-300 hover:text-primary-600"
                 >
                   <FaEnvelope className="w-5 h-5" />
-                  <span>Email Us</span>
+                  <span>{t('quickContact.email')}</span>
                 </a>
                 <a
                   href="tel:+1234567890"
                   className="flex items-center space-x-3 text-gray-600 dark:text-gray-300 hover:text-primary-600"
                 >
                   <FaPhone className="w-5 h-5" />
-                  <span>Call Us</span>
+                  <span>{t('quickContact.call')}</span>
                 </a>
               </div>
             </div>
 
             <div>
-              <h3 className="text-xl font-bold mb-4">Property Information</h3>
+              <h3 className="text-xl font-bold mb-4">{t('propertyInfo.title')}</h3>
               <div className="space-y-4">
                 <button
                   onClick={handlePrint}
                   className="flex items-center space-x-3 text-gray-600 dark:text-gray-300 hover:text-primary-600"
                 >
                   <FaPrint className="w-5 h-5" />
-                  <span>Print Details</span>
+                  <span>{t('propertyInfo.print')}</span>
                 </button>
                 <button
                   onClick={handleShare}
                   className="flex items-center space-x-3 text-gray-600 dark:text-gray-300 hover:text-primary-600"
                 >
                   <FaShare className="w-5 h-5" />
-                  <span>Share Property</span>
+                  <span>{t('propertyInfo.share')}</span>
                 </button>
               </div>
             </div>
 
             <div className="p-6 bg-gray-50 dark:bg-gray-800 rounded-lg">
-              <h3 className="text-xl font-bold mb-4">Virtual Tour</h3>
+              <h3 className="text-xl font-bold mb-4">{t('virtualTour.title')}</h3>
               <p className="text-gray-600 dark:text-gray-300 mb-4">
-                Experience a virtual walkthrough of this stunning property
+                {t('virtualTour.description')}
               </p>
-              <button className="btn-secondary w-full">
-                Start Virtual Tour
+              <button className="btn-primary w-full">
+                {t('virtualTour.button')}
               </button>
             </div>
           </motion.div>

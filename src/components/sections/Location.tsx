@@ -5,6 +5,7 @@ import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
 import dynamic from 'next/dynamic'
 import { FaMapMarkerAlt, FaCar, FaPlane, FaUmbrellaBeach } from 'react-icons/fa'
+import { useTranslations } from 'next-intl'
 
 const Map = dynamic(
   () => import('../ui/Map'), 
@@ -14,23 +15,19 @@ const Map = dynamic(
 const features = [
   {
     icon: FaCar,
-    title: '10 Minutes to Tavira',
-    description: 'Quick access to historic town center',
+    translationKey: 'tavira'
   },
   {
     icon: FaUmbrellaBeach,
-    title: 'Beach Access',
-    description: '15 minutes to pristine beaches',
+    translationKey: 'beach'
   },
   {
     icon: FaPlane,
-    title: 'Airport Proximity',
-    description: '30 minutes to Faro Airport',
+    translationKey: 'airport'
   },
   {
     icon: FaMapMarkerAlt,
-    title: 'Local Amenities',
-    description: 'Restaurants and shops nearby',
+    translationKey: 'amenities'
   },
 ]
 
@@ -39,6 +36,7 @@ export function Location() {
     triggerOnce: true,
     threshold: 0.1,
   })
+  const t = useTranslations('location')
 
   useEffect(() => {
     // Load Leaflet CSS
@@ -60,9 +58,9 @@ export function Location() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="heading-2 mb-4">Location</h2>
+          <h2 className="heading-2 mb-4">{t('title')}</h2>
           <p className="text-xl text-gray-600 dark:text-gray-300">
-            Perfectly positioned in the heart of Algarve
+            {t('subtitle')}
           </p>
         </motion.div>
 
@@ -79,9 +77,9 @@ export function Location() {
                   <feature.icon className="w-6 h-6 text-primary-600" />
                 </div>
                 <div>
-                  <h3 className="text-lg font-bold mb-1">{feature.title}</h3>
+                  <h3 className="text-lg font-bold mb-1">{t(`${feature.translationKey}.title`)}</h3>
                   <p className="text-gray-600 dark:text-gray-300">
-                    {feature.description}
+                    {t(`${feature.translationKey}.description`)}
                   </p>
                 </div>
               </div>

@@ -28,6 +28,65 @@
     "title": "Gallery",
     "subtitle": "Take a visual tour of this stunning property"
   },
+  "location": {
+    "title": "Location",
+    "subtitle": "Perfectly positioned in the heart of Algarve",
+    "tavira": {
+      "title": "10 Minutes to Tavira",
+      "description": "Quick access to historic town center"
+    },
+    "beach": {
+      "title": "Beach Access",
+      "description": "15 minutes to pristine beaches"
+    },
+    "airport": {
+      "title": "Airport Proximity",
+      "description": "30 minutes to Faro Airport"
+    },
+    "amenities": {
+      "title": "Local Amenities",
+      "description": "Restaurants and shops nearby"
+    }
+  },
+  "contact": {
+    "title": "Contact Us",
+    "subtitle": "Interested in this property? Get in touch with us",
+    "form": {
+      "name": {
+        "label": "Name"
+      },
+      "email": {
+        "label": "Email"
+      },
+      "phone": {
+        "label": "Phone"
+      },
+      "message": {
+        "label": "Message"
+      },
+      "submit": "Send Message"
+    },
+    "quickContact": {
+      "title": "Quick Contact",
+      "whatsapp": "WhatsApp Us",
+      "email": "Email Us",
+      "call": "Call Us"
+    },
+    "propertyInfo": {
+      "title": "Property Information",
+      "print": "Print Details",
+      "share": "Share Property"
+    },
+    "virtualTour": {
+      "title": "Virtual Tour",
+      "description": "Experience a virtual walkthrough of this stunning property",
+      "button": "Start Virtual Tour"
+    },
+    "share": {
+      "title": "Luxury Villa in Eira da Palma",
+      "text": "Check out this stunning luxury villa in Algarve"
+    }
+  },
   "propertyHighlights": {
     "title": "Property Highlights",
     "subtitle": "Discover the exceptional features that make this villa unique",
