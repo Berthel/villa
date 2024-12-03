@@ -5,6 +5,7 @@ import Image from 'next/image'
 import { motion, AnimatePresence } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
 import { FaTimes } from 'react-icons/fa'
+import { useTranslations } from 'next-intl'
 
 const galleryImages = [
   '/photos/251398550.jpg',
@@ -27,6 +28,7 @@ export function Gallery() {
     triggerOnce: true,
     threshold: 0.1,
   })
+  const t = useTranslations('gallery')
 
   return (
     <>
@@ -38,9 +40,9 @@ export function Gallery() {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <h2 className="heading-2 mb-4">Gallery</h2>
+            <h2 className="heading-2 mb-4">{t('title')}</h2>
             <p className="text-xl text-gray-600 dark:text-gray-300">
-              Take a visual tour of this stunning property
+              {t('subtitle')}
             </p>
           </motion.div>
 

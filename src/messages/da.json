@@ -24,6 +24,10 @@
       "description": "Omfattende arealer med anlagte haver"
     }
   },
+  "gallery": {
+    "title": "Galleri",
+    "subtitle": "Tag en visuel rundtur i denne fantastiske ejendom"
+  },
   "propertyHighlights": {
     "title": "Ejendomshøjdepunkter",
     "subtitle": "Opdag de exceptionelle funktioner, der gør denne villa unik",
@@ -48,4 +52,4 @@
       "description": "Panoramaudsigt over bjerge og hav"
     }
   }
-} 
+}

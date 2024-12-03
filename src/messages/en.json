@@ -24,6 +24,10 @@
       "description": "Expansive grounds with landscaped gardens"
     }
   },
+  "gallery": {
+    "title": "Gallery",
+    "subtitle": "Take a visual tour of this stunning property"
+  },
   "propertyHighlights": {
     "title": "Property Highlights",
     "subtitle": "Discover the exceptional features that make this villa unique",
@@ -48,4 +52,4 @@
       "description": "Panoramic mountain and sea views"
     }
   }
-} 
+}

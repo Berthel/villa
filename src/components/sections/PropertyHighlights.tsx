@@ -3,36 +3,33 @@
 import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
 import { FaSwimmingPool, FaHome, FaUmbrellaBeach, FaSun, FaMountain } from 'react-icons/fa'
+import { useTranslations } from 'next-intl'
 
 const highlights = [
   {
     icon: FaSwimmingPool,
-    title: 'Infinity Pool',
-    description: 'Stunning 50m³ infinity pool with panoramic views',
+    translationKey: 'pool'
   },
   {
     icon: FaHome,
-    title: 'Guest Apartment',
-    description: 'Self-contained guest apartment for visitors',
+    translationKey: 'guestApartment'
   },
   {
     icon: FaUmbrellaBeach,
-    title: 'Covered Terrace',
-    description: 'Spacious terrace with built-in BBQ area',
+    translationKey: 'terrace'
   },
   {
     icon: FaSun,
-    title: 'Sustainable Living',
-    description: 'Solar panels and private water well',
+    translationKey: 'sustainable'
   },
   {
     icon: FaMountain,
-    title: 'Breathtaking Views',
-    description: 'Panoramic mountain and sea views',
+    translationKey: 'views'
   },
 ]
 
 export function PropertyHighlights() {
+  const t = useTranslations('propertyHighlights')
   const { ref, inView } = useInView({
     triggerOnce: true,
     threshold: 0.1,
@@ -48,7 +45,7 @@ export function PropertyHighlights() {
             transition={{ duration: 0.6 }}
             className="heading-2 mb-4 text-gray-900 dark:text-white"
           >
-            Property Highlights
+            {t('title')}
           </motion.h2>
           <motion.p
             initial={{ y: 20, opacity: 0 }}
@@ -56,7 +53,7 @@ export function PropertyHighlights() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-xl text-gray-600 dark:text-gray-300"
           >
-            Discover the exceptional features that make this villa unique
+            {t('subtitle')}
           </motion.p>
         </div>
 
@@ -75,10 +72,10 @@ export function PropertyHighlights() {
                 </div>
                 <div>
                   <h3 className="text-xl font-bold mb-2 text-gray-900 dark:text-white">
-                    {highlight.title}
+                    {t(`${highlight.translationKey}.title`)}
                   </h3>
                   <p className="text-gray-600 dark:text-gray-300">
-                    {highlight.description}
+                    {t(`${highlight.translationKey}.description`)}
                   </p>
                 </div>
               </div>
