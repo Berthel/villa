@@ -1,0 +1,114 @@
+{
+  "hero": {
+    "title": "Vila de Luxo em Eira da Palma",
+    "subtitle": "Experimente o máximo do luxo no Algarve",
+    "price": "€899.000",
+    "scrollDown": "Deslizar para Baixo"
+  },
+  "keyFeatures": {
+    "title": "Características Principais",
+    "bedrooms": {
+      "title": "4 Quartos",
+      "description": "Quartos espaçosos com casa de banho privativa"
+    },
+    "bathrooms": {
+      "title": "3 Casas de Banho",
+      "description": "Casas de banho modernas com acabamentos luxuosos"
+    },
+    "livingSpace": {
+      "title": "400m²",
+      "description": "Área habitável projetada para conforto"
+    },
+    "plot": {
+      "title": "Terreno de 7000m²",
+      "description": "Amplos terrenos com jardins paisagísticos"
+    }
+  },
+  "propertyHighlights": {
+    "title": "Destaques da Propriedade",
+    "subtitle": "Descubra as características excepcionais que tornam esta vila única",
+    "pool": {
+      "title": "Piscina Infinita",
+      "description": "Impressionante piscina infinita de 50m³ com vista panorâmica"
+    },
+    "guestApartment": {
+      "title": "Apartamento de Hóspedes",
+      "description": "Apartamento independente para visitantes"
+    },
+    "terrace": {
+      "title": "Terraço Coberto",
+      "description": "Terraço espaçoso com área de churrasqueira"
+    },
+    "sustainable": {
+      "title": "Vida Sustentável",
+      "description": "Painéis solares e poço de água privado"
+    },
+    "views": {
+      "title": "Vistas Deslumbrantes",
+      "description": "Vista panorâmica para a montanha e mar"
+    }
+  },
+  "gallery": {
+    "title": "Galeria",
+    "subtitle": "Faça um tour visual desta propriedade deslumbrante"
+  },
+  "location": {
+    "title": "Localização",
+    "subtitle": "Perfeitamente localizado no coração do Algarve",
+    "tavira": {
+      "title": "10 Minutos até Tavira",
+      "description": "Acesso rápido ao centro histórico"
+    },
+    "beach": {
+      "title": "Acesso à Praia",
+      "description": "15 minutos até praias pristinas"
+    },
+    "airport": {
+      "title": "Proximidade do Aeroporto",
+      "description": "30 minutos até ao Aeroporto de Faro"
+    },
+    "amenities": {
+      "title": "Comodidades Locais",
+      "description": "Restaurantes e lojas nas proximidades"
+    }
+  },
+  "contact": {
+    "title": "Contacte-nos",
+    "subtitle": "Interessado nesta propriedade? Entre em contacto connosco",
+    "form": {
+      "name": {
+        "label": "Nome"
+      },
+      "email": {
+        "label": "Email"
+      },
+      "phone": {
+        "label": "Telefone"
+      },
+      "message": {
+        "label": "Mensagem"
+      },
+      "submit": "Enviar Mensagem"
+    },
+    "quickContact": {
+      "title": "Contacto Rápido",
+      "whatsapp": "WhatsApp",
+      "email": "Enviar Email",
+      "call": "Ligar-nos"
+    },
+    "propertyInfo": {
+      "title": "Informação da Propriedade",
+      "print": "Imprimir Detalhes",
+      "share": "Partilhar Propriedade"
+    },
+    "virtualTour": {
+      "title": "Tour Virtual",
+      "description": "Experimente um tour virtual desta propriedade deslumbrante",
+      "button": "Iniciar Tour Virtual"
+    },
+    "share": {
+      "title": "Vila de Luxo em Eira da Palma",
+      "text": "Veja esta deslumbrante vila de luxo no Algarve"
+    }
+  }
+} 

@@ -47,5 +47,68 @@
       "title": "Fantastisk Utsikt",
       "description": "Panoramautsikt över berg och hav"
     }
+  },
+  "gallery": {
+    "title": "Galleri",
+    "subtitle": "Ta en visuell rundtur i denna fantastiska fastighet"
+  },
+  "location": {
+    "title": "Läge",
+    "subtitle": "Perfekt beläget i hjärtat av Algarve",
+    "tavira": {
+      "title": "10 Minuter till Tavira",
+      "description": "Snabb tillgång till historiska stadskärnan"
+    },
+    "beach": {
+      "title": "Strandtillgång",
+      "description": "15 minuter till orörda stränder"
+    },
+    "airport": {
+      "title": "Flygplats i Närheten",
+      "description": "30 minuter till Faro flygplats"
+    },
+    "amenities": {
+      "title": "Lokala Bekvämligheter",
+      "description": "Restauranger och butiker i närheten"
+    }
+  },
+  "contact": {
+    "title": "Kontakta Oss",
+    "subtitle": "Intresserad av denna fastighet? Kontakta oss",
+    "form": {
+      "name": {
+        "label": "Namn"
+      },
+      "email": {
+        "label": "E-post"
+      },
+      "phone": {
+        "label": "Telefon"
+      },
+      "message": {
+        "label": "Meddelande"
+      },
+      "submit": "Skicka Meddelande"
+    },
+    "quickContact": {
+      "title": "Snabb Kontakt",
+      "whatsapp": "Skriv på WhatsApp",
+      "email": "Skicka E-post",
+      "call": "Ring Oss"
+    },
+    "propertyInfo": {
+      "title": "Fastighetsinformation",
+      "print": "Skriv ut Detaljer",
+      "share": "Dela Fastighet"
+    },
+    "virtualTour": {
+      "title": "Virtuell Rundtur",
+      "description": "Upplev en virtuell rundtur av denna fantastiska fastighet",
+      "button": "Starta Virtuell Rundtur"
+    },
+    "share": {
+      "title": "Lyxvilla i Eira da Palma",
+      "text": "Kolla in denna fantastiska lyxvilla i Algarve"
+    }
   }
 } 

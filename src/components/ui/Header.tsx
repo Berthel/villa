@@ -9,11 +9,11 @@ import { locales, getLocaleFromPathname, removeLocaleFromPathname } from '@/i18n
 
 const languages = [
   { code: 'en', name: 'English', flag: '🇬🇧' },
-  { code: 'da', name: 'Dansk', flag: '🇩🇰' },
+  { code: 'pt', name: 'Português', flag: '🇵🇹' },
   { code: 'sv', name: 'Svenska', flag: '🇸🇪' },
+  { code: 'da', name: 'Dansk', flag: '🇩🇰' },
   { code: 'no', name: 'Norsk', flag: '🇳🇴' },
   { code: 'es', name: 'Español', flag: '🇪🇸' },
-  { code: 'pt', name: 'Português', flag: '🇵🇹' },
 ]
 
 export function Header({ className = '' }) {

@@ -1,0 +1,114 @@
+{
+  "hero": {
+    "title": "Luksusvilla i Eira da Palma",
+    "subtitle": "Opplev essensen av luksuriøst boende i Algarve",
+    "price": "€899.000",
+    "scrollDown": "Rull Ned"
+  },
+  "keyFeatures": {
+    "title": "Hovedfunksjoner",
+    "bedrooms": {
+      "title": "4 Soverom",
+      "description": "Romslige soverom med eget bad"
+    },
+    "bathrooms": {
+      "title": "3 Bad",
+      "description": "Moderne bad med luksuriøse detaljer"
+    },
+    "livingSpace": {
+      "title": "400m²",
+      "description": "Boareal designet for komfort"
+    },
+    "plot": {
+      "title": "7000m² Tomt",
+      "description": "Stort område med velstelte hager"
+    }
+  },
+  "propertyHighlights": {
+    "title": "Eiendommens Høydepunkter",
+    "subtitle": "Oppdag de eksepsjonelle funksjonene som gjør denne villaen unik",
+    "pool": {
+      "title": "Infinity Basseng",
+      "description": "Imponerende 50m³ infinity basseng med panoramautsikt"
+    },
+    "guestApartment": {
+      "title": "Gjesteleilighet",
+      "description": "Separat gjesteleilighet for besøkende"
+    },
+    "terrace": {
+      "title": "Overdekket Terrasse",
+      "description": "Romslig terrasse med innebygd grillområde"
+    },
+    "sustainable": {
+      "title": "Bærekraftig Bolig",
+      "description": "Solcellepaneler og privat vannbrønn"
+    },
+    "views": {
+      "title": "Fantastisk Utsikt",
+      "description": "Panoramautsikt over fjell og hav"
+    }
+  },
+  "gallery": {
+    "title": "Galleri",
+    "subtitle": "Ta en visuell rundtur i denne fantastiske eiendommen"
+  },
+  "location": {
+    "title": "Beliggenhet",
+    "subtitle": "Perfekt plassert i hjertet av Algarve",
+    "tavira": {
+      "title": "10 Minutter til Tavira",
+      "description": "Rask tilgang til historisk bysentrum"
+    },
+    "beach": {
+      "title": "Strandtilgang",
+      "description": "15 minutter til uberørte strender"
+    },
+    "airport": {
+      "title": "Flyplass i Nærheten",
+      "description": "30 minutter til Faro flyplass"
+    },
+    "amenities": {
+      "title": "Lokale Fasiliteter",
+      "description": "Restauranter og butikker i nærheten"
+    }
+  },
+  "contact": {
+    "title": "Kontakt Oss",
+    "subtitle": "Interessert i denne eiendommen? Ta kontakt med oss",
+    "form": {
+      "name": {
+        "label": "Navn"
+      },
+      "email": {
+        "label": "E-post"
+      },
+      "phone": {
+        "label": "Telefon"
+      },
+      "message": {
+        "label": "Melding"
+      },
+      "submit": "Send Melding"
+    },
+    "quickContact": {
+      "title": "Rask Kontakt",
+      "whatsapp": "Send WhatsApp",
+      "email": "Send E-post",
+      "call": "Ring Oss"
+    },
+    "propertyInfo": {
+      "title": "Eiendomsinformasjon",
+      "print": "Skriv ut Detaljer",
+      "share": "Del Eiendom"
+    },
+    "virtualTour": {
+      "title": "Virtuell Visning",
+      "description": "Opplev en virtuell visning av denne fantastiske eiendommen",
+      "button": "Start Virtuell Visning"
+    },
+    "share": {
+      "title": "Luksusvilla i Eira da Palma",
+      "text": "Se denne fantastiske luksusvillaen i Algarve"
+    }
+  }
+} 
