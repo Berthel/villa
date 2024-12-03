@@ -48,7 +48,7 @@ export function Gallery() {
             initial={{ opacity: 0 }}
             animate={inView ? { opacity: 1 } : {}}
             transition={{ duration: 1.2, ease: "easeInOut" }}
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"
+            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 overflow-hidden"
           >
             {galleryImages.map((image, index) => (
               <motion.div
@@ -63,14 +63,13 @@ export function Gallery() {
                 }}
                 className="relative aspect-[4/3] cursor-pointer group"
                 onClick={() => setSelectedImage(image)}
-                style={{ position: 'relative', height: '300px' }}
               >
                 <Image
                   src={image}
                   alt={`Villa image ${index + 1}`}
                   fill
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                  className="object-cover rounded-lg transition-all duration-700 ease-in-out group-hover:scale-103"
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  className="object-cover rounded-lg transition-all duration-700 ease-in-out transform group-hover:scale-[1.02]"
                   priority={index < 6}
                 />
                 <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-25 transition-all duration-700 ease-in-out rounded-lg" />
